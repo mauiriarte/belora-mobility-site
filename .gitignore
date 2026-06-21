@@ -1,0 +1,6 @@
+# Local tooling / editor
+.claude/
+.DS_Store
+
+# Dependencies (none used, but just in case)
+node_modules/

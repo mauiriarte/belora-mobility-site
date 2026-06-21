@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Belora Mobility — On-site bike fleets, fully managed</title>
+<meta name="description" content="Professionally operated on-site bike fleets for large resorts and industrial environments. One partner. One operator. On-site mobility, fully managed." />
+
+<!-- Clash Display (display) + Inter (body) -->
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=inter@400,500,600&display=swap" rel="stylesheet" />
+
+<link rel="icon" type="image/svg+xml" href="assets/symbol-lime.svg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- ===== Grain + custom cursor ===== -->
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ===== Loader ===== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <span class="loader__mark">BELORA</span>
+    <span class="loader__count" id="loaderCount">00</span>
+  </div>
+  <div class="loader__bar"><span id="loaderFill"></span></div>
+</div>
+
+<!-- ===== Navigation ===== -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand" data-cursor="hover" aria-label="Belora Mobility — home">
+    <img class="nav__logo" src="assets/logo-horizontal-dark.svg" alt="Belora Mobility" />
+  </a>
+  <nav class="nav__links">
+    <a href="#why" data-cursor="hover">Why Belora</a>
+    <a href="#serve" data-cursor="hover">Who we serve</a>
+    <a href="#about" data-cursor="hover">About</a>
+  </nav>
+  <a href="#contact" class="nav__cta" data-cursor="hover">
+    <span>Contact us</span>
+  </a>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
+</header>
+
+<!-- ===== Mobile menu ===== -->
+<nav class="navmenu" id="navMenu" aria-hidden="true" aria-label="Mobile">
+  <a href="#why" data-navlink>Why Belora</a>
+  <a href="#serve" data-navlink>Who we serve</a>
+  <a href="#about" data-navlink>About</a>
+  <a href="#contact" data-navlink>Contact us</a>
+</nav>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="webgl"></canvas>
+    <div class="hero__veil"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow reveal-fade">
+        <span class="dot"></span> On-site mobility, fully operated — Barcelona, Spain
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line"><span>Bike Fleets for</span></span>
+        <span class="line"><span>Large Hospitality</span></span>
+        <span class="line"><span>&amp; <em>Industrial</em> Sites</span></span>
+      </h1>
+
+      <p class="hero__sub reveal-fade">
+        Professionally operated on-site bike fleets for large resorts
+        and industrial environments.
+      </p>
+
+      <div class="hero__actions reveal-fade">
+        <a href="#contact" class="btn btn--solid" data-cursor="hover">
+          <span>Contact us</span>
+          <svg viewBox="0 0 16 16" width="15" height="15"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+        </a>
+        <a href="#why" class="btn btn--ghost" data-cursor="hover">Why Belora</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll reveal-fade">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"><i></i></div>
+    </div>
+
+    <div class="hero__meta reveal-fade">
+      <span>01 — Managed Fleet Operations</span>
+      <span>Trust · Luxury · Sustainability</span>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Zero-CAPEX</span><i>✦</i>
+      <span>One operator</span><i>✦</i>
+      <span>Fully managed</span><i>✦</i>
+      <span>On-site mobility</span><i>✦</i>
+      <span>Predictable OPEX</span><i>✦</i>
+      <span>Zero-CAPEX</span><i>✦</i>
+      <span>One operator</span><i>✦</i>
+      <span>Fully managed</span><i>✦</i>
+      <span>On-site mobility</span><i>✦</i>
+      <span>Predictable OPEX</span><i>✦</i>
+    </div>
+  </section>
+
+  <!-- ===== MANIFESTO / VALUE PROP ===== -->
+  <section class="manifesto" id="manifesto">
+    <p class="section-label reveal-up"><span>Why Belora</span></p>
+    <h2 class="manifesto__title">
+      <span class="word">One</span> <span class="word">partner.</span>
+      <span class="word">One</span> <span class="word">operator.</span><br/>
+      <span class="word accent">On-site</span> <span class="word accent">mobility,</span>
+      <span class="word accent">fully</span> <span class="word accent">managed.</span>
+    </h2>
+    <p class="manifesto__body reveal-up">
+      We design, deploy, and operate bike fleets — so clients can outsource
+      internal mobility to a single partner.
+    </p>
+  </section>
+
+  <!-- ===== BENEFITS (Why Belora) ===== -->
+  <section class="benefits" id="why">
+    <div class="benefits__head">
+      <p class="section-label reveal-up"><span>Key benefits</span></p>
+      <h3 class="benefits__lead reveal-up">
+        Everything that makes a fleet reliable —<br/> owned end to end by one operator.
+      </h3>
+    </div>
+
+    <div class="benefits__grid">
+      <article class="bcard" data-cursor="hover">
+        <span class="bcard__num">01</span>
+        <h4>Operational reliability through site-specific fleets</h4>
+        <p>Minimized downtime and reduced friction through fleets configured
+           for terrain, use case, and user profile.</p>
+        <div class="bcard__line"></div>
+      </article>
+
+      <article class="bcard" data-cursor="hover">
+        <span class="bcard__num">02</span>
+        <h4>Single point of accountability</h4>
+        <p>One operator, fully responsible. No shared ownership of service
+           issues — maintenance, repairs, insurance, incidents, and spare
+           parts are on us.</p>
+        <div class="bcard__line"></div>
+      </article>
+
+      <article class="bcard" data-cursor="hover">
+        <span class="bcard__num">03</span>
+        <h4>Zero-CAPEX, predictable OPEX model</h4>
+        <p>Monthly service pricing replaces upfront investment and variable
+           operational costs.</p>
+        <div class="bcard__line"></div>
+      </article>
+    </div>
+
+    <div class="benefits__result reveal-up">
+      <span class="benefits__result-mark">→</span>
+      <p>No operational headaches, predictable costs, and a single contract
+         for on-site mobility.</p>
+    </div>
+  </section>
+
+  <!-- ===== WHO WE SERVE (horizontal pinned) ===== -->
+  <section class="serve" id="serve">
+    <div class="serve__intro">
+      <p class="section-label reveal-up"><span>Who we serve</span></p>
+      <h3 class="serve__title reveal-up">
+        Built for large-scale on-site mobility.
+        <em>Tailored to each site.</em>
+      </h3>
+      <p class="serve__lead reveal-up">
+        We operate at sites where size and dispersion make internal mobility
+        an operational challenge.
+      </p>
+    </div>
+
+    <div class="serve__pin" id="servePin">
+      <div class="serve__track" id="serveTrack">
+
+        <article class="panel">
+          <span class="panel__idx">01</span>
+          <div class="panel__media" data-img="resort"></div>
+          <div class="panel__body">
+            <h4>Large Hospitality Sites</h4>
+            <ul>
+              <li>Guest and staff mobility</li>
+              <li>Minimal client-side management</li>
+              <li>Rapid maintenance response</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel">
+          <span class="panel__idx">02</span>
+          <div class="panel__media" data-img="industrial"></div>
+          <div class="panel__body">
+            <h4>Industrial Sites &amp; Logistics</h4>
+            <ul>
+              <li>Large-scale site coverage</li>
+              <li>Reduced transit times</li>
+              <li>Operationally efficient mobility</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="panel">
+          <span class="panel__idx">03</span>
+          <div class="panel__media" data-img="campus"></div>
+          <div class="panel__body">
+            <h4>Corporate Campuses</h4>
+            <ul>
+              <li>Zero CAPEX deployment</li>
+              <li>Minimal operational burden</li>
+              <li>Fully managed service</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about">
+    <p class="section-label reveal-up"><span>About</span></p>
+    <div class="about__grid">
+      <h3 class="about__title">
+        On-site mobility requires more than bikes.
+        <em>It requires operations.</em>
+      </h3>
+      <div class="about__col">
+        <p class="reveal-up">
+          Belora was founded by operators who have personally managed and
+          operated fleets of thousands of bicycles in real operations. That
+          hands-on experience made one thing clear: service quality,
+          maintenance, uptime, and reliability are the key success factors.
+        </p>
+        <p class="about__mission reveal-up">
+          Belora exists to fully operate on-site mobility, so clients do not
+          need to manage this complexity internally.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROVEN DEPLOYMENTS ===== -->
+  <section class="proven" id="proven">
+    <div class="proven__head">
+      <p class="section-label reveal-up"><span>Proven deployments</span></p>
+      <h3 class="proven__lead reveal-up">Operating today, at scale.</h3>
+    </div>
+
+    <div class="proven__grid">
+      <article class="dcard" data-cursor="hover">
+        <div class="dcard__media" data-img="ikos"></div>
+        <span class="dcard__tag">Hospitality</span>
+        <div class="dcard__foot">
+          <h4>IKOS Resorts</h4>
+          <p>Large-scale guest bike fleets across multiple five-star beach resorts.</p>
+          <button class="dcard__play" type="button" data-cursor="hover"
+                  data-video="assets/testimonial-ikos.mp4" aria-label="Play IKOS guest testimonial">
+            <span class="dcard__play-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="13" height="13"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            </span>
+            <span>Watch testimonial</span>
+          </button>
+        </div>
+      </article>
+
+      <article class="dcard" data-cursor="hover">
+        <div class="dcard__media" data-img="port"></div>
+        <span class="dcard__tag">Industrial</span>
+        <div class="dcard__foot">
+          <h4>Puerto de Barcelona</h4>
+          <p>Internal employee mobility across a large industrial port environment.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="contact__left">
+      <p class="section-label reveal-up"><span>Get in touch</span></p>
+      <h3 class="contact__title">
+        Contact <span class="accent">Belora</span>
+      </h3>
+      <p class="contact__sub reveal-up">Tell us briefly how we can help.</p>
+      <div class="contact__direct reveal-up">
+        <a href="mailto:admin@beloramobility.com" data-cursor="hover">admin@beloramobility.com</a>
+        <span>Barcelona, Spain</span>
+      </div>
+    </div>
+
+    <form class="contact__form" id="contactForm" novalidate>
+      <div class="field">
+        <input type="text" id="company" name="company" required placeholder=" " />
+        <label for="company">Company name</label>
+        <i></i>
+      </div>
+      <div class="field">
+        <input type="text" id="firstname" name="firstname" required placeholder=" " />
+        <label for="firstname">First name</label>
+        <i></i>
+      </div>
+      <div class="field">
+        <input type="email" id="email" name="email" required placeholder=" " />
+        <label for="email">Email</label>
+        <i></i>
+      </div>
+      <div class="field field--select">
+        <select id="reason" name="reason" required>
+          <option value="" disabled selected>Why are you contacting us?</option>
+          <option value="fleet">Fleet inquiry</option>
+          <option value="other">Other</option>
+        </select>
+        <i></i>
+      </div>
+      <button type="submit" class="btn btn--solid btn--full" data-cursor="hover">
+        <span>Send message</span>
+        <svg viewBox="0 0 16 16" width="15" height="15"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+      </button>
+      <p class="contact__note" id="formNote" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer invert">
+    <img class="footer__logo" src="assets/logo-horizontal-light.svg" alt="Belora Mobility" />
+    <div class="footer__row">
+      <div class="footer__col">
+        <span class="footer__label">Contact</span>
+        <a href="mailto:admin@beloramobility.com" data-cursor="hover">admin@beloramobility.com</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Location</span>
+        <span>Barcelona, Spain</span>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Legal</span>
+        <a href="#" data-cursor="hover">Privacy Policy</a>
+        <a href="#" data-cursor="hover">Cookie Policy</a>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© 2026 Belora Mobility</span>
+      <span>Designed for trust, luxury &amp; sustainability</span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- ===== Testimonial video modal ===== -->
+<div class="vmodal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Guest testimonial">
+  <div class="vmodal__backdrop" data-close></div>
+  <div class="vmodal__inner">
+    <button class="vmodal__close" type="button" data-close data-cursor="hover" aria-label="Close video">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+    </button>
+    <video class="vmodal__video" id="testimonialVideo" controls playsinline preload="metadata"></video>
+  </div>
+</div>
+
+<!-- ===== Libraries ===== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

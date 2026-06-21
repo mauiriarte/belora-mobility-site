@@ -28,7 +28,7 @@
     /* ---- orthographic iso camera (soft 3D, vectr-style) ---- */
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 120);
     camera.position.set(13, 12, 17);
-    const VIEW = isMobile ? 11 : 16;       // smaller = zoomed in; mobile zoomed in more (bigger scene)
+    const VIEW = isMobile ? 8.5 : 16;       // smaller = zoomed in; mobile zoomed in more (bigger scene)
     function setFrustum() {
       const a = (canvas.clientWidth || 1) / (canvas.clientHeight || 1);
       camera.left = -VIEW * a; camera.right = VIEW * a;

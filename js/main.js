@@ -332,7 +332,10 @@
       resort:     'assets/img/hospitality.jpg',   // Hospitality segment
       industrial: 'assets/img/industrial.jpg',    // Industrial segment (MB92 drydock)
       campus:     'assets/img/campus.jpg',         // Campus segment
-      fleet:      'assets/img/ikos.jpg',           // Solution — fleet at a client site
+      fleet:       'assets/img/ikos.jpg',          // Solution step 1 — Tailored fleet
+      maintenance: 'assets/img/story-ikos.jpg',    // Solution step 2 — Maintenance & repair
+      software:    'assets/img/campus.jpg',        // Solution step 3 — Software
+      lease:       'assets/img/port.jpg',          // Solution step 4 — Operating lease
       ikos:       'assets/img/story-ikos.jpg',     // Ikos customer story
       port:       'assets/img/port.jpg',           // MB92 customer story
       ikosthumb:  'assets/img/hospitality.jpg',    // proof bar thumbnail
@@ -440,6 +443,9 @@
       lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1, smoothWheel: true });
       window.__lenis = lenis;     // exposed so the video modal can lock scroll
       lenis.on('scroll', ScrollTrigger.update);
+      // pins add spacers that grow the page — keep Lenis's scroll limit in sync,
+      // otherwise the bottom becomes unreachable and scroll mapping drifts past pins
+      ScrollTrigger.addEventListener('refresh', () => lenis.resize());
       gsap.ticker.add((time) => lenis.raf(time * 1000));
       gsap.ticker.lagSmoothing(0);
       document.documentElement.classList.add('lenis');
@@ -616,6 +622,63 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /*  Solution timeline — scroll fills the line, steps swap the image   */
+  /* ------------------------------------------------------------------ */
+  function initSolution() {
+    const wrap = document.getElementById('features');
+    const track = wrap && wrap.querySelector('.features__track');
+    const fill = document.getElementById('featuresFill');
+    if (!wrap || !track || !fill || !window.ScrollTrigger) return;
+    const features = Array.from(wrap.querySelectorAll('.feature'));
+    const nodes = features.map((f) => f.querySelector('.feature__node'));
+    const imgs = Array.from(document.querySelectorAll('.solution__img'));
+    const n = features.length;
+    if (!n) return;
+
+    // span the line exactly from the first node centre to the last (no overshoot)
+    function positionTrack() {
+      const wr = wrap.getBoundingClientRect();
+      const a = nodes[0].getBoundingClientRect();
+      const b = nodes[n - 1].getBoundingClientRect();
+      const top = (a.top + a.height / 2) - wr.top;
+      const bottom = (b.top + b.height / 2) - wr.top;
+      track.style.top = top + 'px';
+      track.style.height = Math.max(0, bottom - top) + 'px';
+    }
+
+    let current = -1;
+    function setIndex(idx) {
+      if (idx === current) return;
+      current = idx;
+      features.forEach((f, i) => f.classList.toggle('is-active', i <= idx));
+      imgs.forEach((im, i) => im.classList.toggle('is-active', i === idx));
+    }
+    setIndex(0);
+    positionTrack();
+
+    // pin the section and lock scroll until every step has been reached
+    ScrollTrigger.create({
+      trigger: '.solution',
+      start: 'top 80px',
+      end: () => '+=' + Math.round(window.innerHeight * 1.15),
+      pin: !isMobile,
+      scrub: true,
+      anticipatePin: 1,
+      invalidateOnRefresh: true,
+      // higher-on-page pin must refresh first so its spacer is accounted for
+      // by the lower "Who it's for" pin (which is created earlier in the code)
+      refreshPriority: 10,
+      onRefresh: positionTrack,
+      onUpdate: (self) => {
+        // complete the timeline at 90% so the final step holds for a beat
+        const tp = Math.min(1, self.progress / 0.9);
+        fill.style.height = (tp * 100) + '%';
+        setIndex(Math.max(0, Math.min(n - 1, Math.floor(tp * (n - 1) + 0.0001))));
+      },
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
   /*  Nav — glass background after leaving the hero                     */
   /* ------------------------------------------------------------------ */
   function initNav() {
@@ -643,6 +706,7 @@
     initNav();
     initScroll();
     initStats();
+    initSolution();
     runLoader(() => { heroIntro(); });
   }
 

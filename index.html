@@ -101,15 +101,18 @@
       <div class="proof__num"><span class="count" data-count="1000">0</span><i>+</i></div>
       <span class="proof__cap">bikes in operation across Spain &amp; Greece</span>
     </div>
-    <div class="proof__clients">
-      <article class="client reveal-up" data-cursor="hover">
-        <img class="client__logo" src="assets/ikos-logo.png" alt="Ikos Resorts" />
-        <span class="client__cap">5-star resort chain</span>
-      </article>
-      <article class="client reveal-up" data-cursor="hover">
-        <span class="client__wordmark" aria-label="MB92">MB92</span>
-        <span class="client__cap">World-leading shipyard, Port of Barcelona</span>
-      </article>
+    <div class="proof__clientswrap reveal-up">
+      <span class="proof__label">Clients that work with Belora</span>
+      <div class="proof__clients">
+        <article class="client" data-cursor="hover">
+          <img class="client__logo" src="assets/ikos-logo.png" alt="Ikos Resorts" />
+          <span class="client__cap">5-star resort chain</span>
+        </article>
+        <article class="client" data-cursor="hover">
+          <span class="client__wordmark" aria-label="MB92">MB92</span>
+          <span class="client__cap">World-leading shipyard, Port of Barcelona</span>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -131,7 +134,12 @@
   <!-- ===== SOLUTION ===== -->
   <section class="solution" id="solution">
     <div class="solution__media reveal-up">
-      <div class="solution__img" data-img="fleet"></div>
+      <div class="solution__stack">
+        <div class="solution__img is-active" data-img="fleet"></div>
+        <div class="solution__img" data-img="maintenance"></div>
+        <div class="solution__img" data-img="software"></div>
+        <div class="solution__img" data-img="lease"></div>
+      </div>
     </div>
     <div class="solution__body">
       <p class="section-label reveal-up"><span>One partner, everything included</span></p>
@@ -140,27 +148,48 @@
         Belora isn't a bike supplier — we're your on-site mobility partner.
         Everything is included in one service:
       </p>
-      <div class="features">
-        <article class="feature reveal-up">
-          <span class="feature__num">01</span>
-          <h4>Tailored fleet</h4>
-          <p>We assess your site, terrain and use cases, then design the right mix:
-             from mechanical bikes to eBikes and cargo bikes.</p>
+      <div class="features" id="features">
+        <span class="features__track" aria-hidden="true"><span class="features__fill" id="featuresFill"></span></span>
+
+        <article class="feature is-active">
+          <span class="feature__node">
+            <svg viewBox="0 0 24 24"><circle cx="5.5" cy="17.5" r="3.5"/><circle cx="18.5" cy="17.5" r="3.5"/><circle cx="15" cy="5" r="1"/><path d="M12 17.5V14l-3-3 4-3 2 3h2"/></svg>
+          </span>
+          <div class="feature__text">
+            <h4>Tailored fleet</h4>
+            <p>We assess your site, terrain and use cases, then design the right mix:
+               from mechanical bikes to eBikes and cargo bikes.</p>
+          </div>
         </article>
-        <article class="feature reveal-up">
-          <span class="feature__num">02</span>
-          <h4>Maintenance &amp; repair</h4>
-          <p>Kept running by our qualified partner network, so your fleet is always available.</p>
+
+        <article class="feature">
+          <span class="feature__node">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </span>
+          <div class="feature__text">
+            <h4>Maintenance &amp; repair</h4>
+            <p>Kept running by our qualified partner network, so your fleet is always available.</p>
+          </div>
         </article>
-        <article class="feature reveal-up">
-          <span class="feature__num">03</span>
-          <h4>Software</h4>
-          <p>Manage, track and optimize your entire fleet from one platform.</p>
+
+        <article class="feature">
+          <span class="feature__node">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </span>
+          <div class="feature__text">
+            <h4>Software</h4>
+            <p>Manage, track and optimize your entire fleet from one platform.</p>
+          </div>
         </article>
-        <article class="feature reveal-up">
-          <span class="feature__num">04</span>
-          <h4>Operating lease <span class="feature__tag">2–4 years</span></h4>
-          <p>One predictable monthly fee. No upfront investment, no asset on your books.</p>
+
+        <article class="feature">
+          <span class="feature__node">
+            <svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+          </span>
+          <div class="feature__text">
+            <h4>Operating lease <span class="feature__tag">2–4 years</span></h4>
+            <p>One predictable monthly fee. No upfront investment, no asset on your books.</p>
+          </div>
         </article>
       </div>
     </div>
@@ -212,7 +241,7 @@
 
   <!-- ===== WHY MANAGED ===== -->
   <section class="why" id="why">
-    <p class="section-label reveal-up"><span>Why managed</span></p>
+    <p class="section-label reveal-up"><span>Benefits of an Operating Lease</span></p>
     <div class="why__grid">
       <h3 class="why__title reveal-up">All the mobility. <em>None of the ownership.</em></h3>
       <div class="why__col">
@@ -287,22 +316,25 @@
       <article class="step reveal-up">
         <span class="step__num">01</span>
         <h4>Assess</h4>
-        <p>We visit and analyze your site, terrain and mobility needs.</p>
+        <p>It starts with a call and an on-site visit from our experts to understand
+           how your site really moves.</p>
       </article>
       <article class="step reveal-up">
         <span class="step__num">02</span>
         <h4>Design</h4>
-        <p>We build a tailored fleet and integration plan, financing included.</p>
+        <p>We propose a tailored fleet — design, specs, a maintenance schedule and a
+           financing plan.</p>
       </article>
       <article class="step reveal-up">
         <span class="step__num">03</span>
         <h4>Deploy</h4>
-        <p>We deliver and set up bikes, stations and software.</p>
+        <p>We handle the full rollout ourselves, so your fleet works perfectly from day one.</p>
       </article>
       <article class="step reveal-up">
         <span class="step__num">04</span>
         <h4>Manage</h4>
-        <p>We maintain and optimize the fleet for the life of the contract.</p>
+        <p>We take care of maintenance and everything else for the life of the contract —
+           your long-term mobility partner, not just a supplier.</p>
       </article>
     </div>
   </section>

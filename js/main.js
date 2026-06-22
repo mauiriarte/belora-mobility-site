@@ -329,11 +329,14 @@
   /* ------------------------------------------------------------------ */
   function initImages() {
     const map = {
-      resort:     'assets/img/hospitality.jpg',   // IKOS — guest mobility
-      industrial: 'assets/img/industrial.jpg',    // MB92 — Port of Barcelona drydock
-      campus:     'assets/img/campus.jpg',         // IKOS — managed fleet on site
-      ikos:       'assets/img/ikos.jpg',           // IKOS Resorts deployment
-      port:       'assets/img/port.jpg',           // Puerto de Barcelona (MB92) deployment
+      resort:     'assets/img/hospitality.jpg',   // Hospitality segment
+      industrial: 'assets/img/industrial.jpg',    // Industrial segment (MB92 drydock)
+      campus:     'assets/img/campus.jpg',         // Campus segment
+      fleet:      'assets/img/ikos.jpg',           // Solution — fleet at a client site
+      ikos:       'assets/img/story-ikos.jpg',     // Ikos customer story
+      port:       'assets/img/port.jpg',           // MB92 customer story
+      ikosthumb:  'assets/img/hospitality.jpg',    // proof bar thumbnail
+      mb92thumb:  'assets/img/port.jpg',           // proof bar thumbnail
     };
     document.querySelectorAll('[data-img]').forEach((el) => {
       const key = el.getAttribute('data-img');
@@ -465,28 +468,16 @@
       });
     });
 
-    /* manifesto word-by-word */
-    gsap.from('.manifesto__title .word', {
-      opacity: 0.12, y: 0, duration: 1, ease: 'none', stagger: 0.06,
-      scrollTrigger: { trigger: '.manifesto__title', start: 'top 80%', end: 'bottom 60%', scrub: 1 },
+    /* problem headline word-by-word */
+    gsap.from('.problem__title .word', {
+      opacity: 0.14, duration: 1, ease: 'none', stagger: 0.06,
+      scrollTrigger: { trigger: '.problem__title', start: 'top 80%', end: 'bottom 62%', scrub: 1 },
     });
 
-    /* benefit cards stagger */
-    gsap.from('.bcard', {
-      y: 60, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.12,
-      scrollTrigger: { trigger: '.benefits__grid', start: 'top 82%' },
-    });
-
-    /* deployment cards */
+    /* customer story cards */
     gsap.from('.dcard', {
       y: 60, opacity: 0, duration: 1, ease: 'power3.out', stagger: 0.15,
       scrollTrigger: { trigger: '.proven__grid', start: 'top 84%' },
-    });
-
-    /* marquee scroll-linked drift */
-    gsap.to('.marquee__track', {
-      xPercent: -50, ease: 'none',
-      scrollTrigger: { trigger: '.marquee', start: 'top bottom', end: 'bottom top', scrub: 1 },
     });
 
     /* ---- horizontal pinned "Who we serve" ---- */
@@ -603,6 +594,28 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /*  Stat count-up                                                     */
+  /* ------------------------------------------------------------------ */
+  function initStats() {
+    const els = document.querySelectorAll('.count');
+    if (!els.length) return;
+    function run(el) {
+      const target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      const dur = 1700, start = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased).toLocaleString('en-US');
+        if (p < 1) requestAnimationFrame(tick);
+      })(start);
+    }
+    els.forEach((el) => {
+      if (window.ScrollTrigger) ScrollTrigger.create({ trigger: el, start: 'top 92%', once: true, onEnter: () => run(el) });
+      else run(el);
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
   /*  Nav — glass background after leaving the hero                     */
   /* ------------------------------------------------------------------ */
   function initNav() {
@@ -629,6 +642,7 @@
     initVideo();
     initNav();
     initScroll();
+    initStats();
     runLoader(() => { heroIntro(); });
   }
 

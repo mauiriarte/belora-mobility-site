@@ -3,19 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Belora Mobility — On-site bike fleets, fully managed</title>
-<meta name="description" content="Professionally operated on-site bike fleets for large resorts and industrial environments. One partner. One operator. On-site mobility, fully managed." />
+<title>Belora Mobility — Fully managed on-site bike fleets for large sites</title>
+<meta name="description" content="Belora deploys, finances and maintains tailored bike fleets for resorts, industrial sites and campuses — all through a single operating lease." />
 
-<!-- Clash Display (display) + Inter (body) -->
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=inter@400,500,600&display=swap" rel="stylesheet" />
-
 <link rel="icon" type="image/svg+xml" href="assets/symbol-lime.svg" />
 <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-<!-- ===== Grain + custom cursor ===== -->
 <div class="grain" aria-hidden="true"></div>
 <div class="cursor" id="cursor" aria-hidden="true"></div>
 <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
@@ -35,22 +32,24 @@
     <img class="nav__logo" src="assets/logo-horizontal-dark.svg" alt="Belora Mobility" />
   </a>
   <nav class="nav__links">
-    <a href="#why" data-cursor="hover">Why Belora</a>
-    <a href="#serve" data-cursor="hover">Who we serve</a>
-    <a href="#about" data-cursor="hover">About</a>
+    <a href="#solutions" data-cursor="hover">Solutions</a>
+    <a href="#how" data-cursor="hover">How it works</a>
+    <a href="#stories" data-cursor="hover">Case studies</a>
+    <a href="https://belorago.com" target="_blank" rel="noopener" data-cursor="hover">Belora GO ↗</a>
   </nav>
   <a href="#contact" class="nav__cta" data-cursor="hover">
-    <span>Contact us</span>
+    <span>Book a free consultation</span>
   </a>
   <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu"><span></span><span></span></button>
 </header>
 
 <!-- ===== Mobile menu ===== -->
 <nav class="navmenu" id="navMenu" aria-hidden="true" aria-label="Mobile">
-  <a href="#why" data-navlink>Why Belora</a>
-  <a href="#serve" data-navlink>Who we serve</a>
-  <a href="#about" data-navlink>About</a>
-  <a href="#contact" data-navlink>Contact us</a>
+  <a href="#solutions" data-navlink>Solutions</a>
+  <a href="#how" data-navlink>How it works</a>
+  <a href="#stories" data-navlink>Case studies</a>
+  <a href="https://belorago.com" target="_blank" rel="noopener" data-navlink>Belora GO ↗</a>
+  <a href="#contact" data-navlink>Book a consultation</a>
 </nav>
 
 <main id="top">
@@ -62,26 +61,25 @@
 
     <div class="hero__content">
       <p class="hero__eyebrow reveal-fade">
-        <span class="dot"></span> On-site mobility, fully operated — Barcelona, Spain
+        <span class="dot"></span> For resorts · industrial sites · campuses
       </p>
 
       <h1 class="hero__title">
-        <span class="line"><span>Bike Fleets for</span></span>
-        <span class="line"><span>Large Hospitality</span></span>
-        <span class="line"><span>&amp; <em>Industrial</em> Sites</span></span>
+        <span class="line"><span>On-site mobility,</span></span>
+        <span class="line"><span><em>fully managed.</em></span></span>
       </h1>
 
       <p class="hero__sub reveal-fade">
-        Professionally operated on-site bike fleets for large resorts
-        and industrial environments.
+        Belora deploys, finances and maintains tailored bike fleets for resorts,
+        industrial sites and campuses — all through a single operating lease.
       </p>
 
       <div class="hero__actions reveal-fade">
         <a href="#contact" class="btn btn--solid" data-cursor="hover">
-          <span>Contact us</span>
+          <span>Book a free consultation</span>
           <svg viewBox="0 0 16 16" width="15" height="15"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
         </a>
-        <a href="#why" class="btn btn--ghost" data-cursor="hover">Why Belora</a>
+        <a href="#how" class="btn btn--ghost" data-cursor="hover">See how it works</a>
       </div>
     </div>
 
@@ -91,97 +89,88 @@
     </div>
 
     <div class="hero__meta reveal-fade">
-      <span>01 — Managed Fleet Operations</span>
+      <span>Operating lease · Fully managed</span>
       <span>Trust · Luxury · Sustainability</span>
     </div>
   </section>
 
-  <!-- ===== MARQUEE ===== -->
-  <section class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>Zero-CAPEX</span><i>✦</i>
-      <span>One operator</span><i>✦</i>
-      <span>Fully managed</span><i>✦</i>
-      <span>On-site mobility</span><i>✦</i>
-      <span>Predictable OPEX</span><i>✦</i>
-      <span>Zero-CAPEX</span><i>✦</i>
-      <span>One operator</span><i>✦</i>
-      <span>Fully managed</span><i>✦</i>
-      <span>On-site mobility</span><i>✦</i>
-      <span>Predictable OPEX</span><i>✦</i>
+  <!-- ===== PROOF BAR ===== -->
+  <section class="proof" id="proof">
+    <div class="proof__stat reveal-up">
+      <span class="proof__label">In operation today</span>
+      <div class="proof__num"><span class="count" data-count="1000">0</span><i>+</i></div>
+      <span class="proof__cap">bikes in operation across Spain &amp; Greece</span>
+    </div>
+    <div class="proof__clients">
+      <article class="client reveal-up" data-cursor="hover">
+        <div class="client__img" data-img="ikosthumb"></div>
+        <div class="client__txt"><strong>Ikos Resorts</strong><span>5-star resort chain</span></div>
+      </article>
+      <article class="client reveal-up" data-cursor="hover">
+        <div class="client__img" data-img="mb92thumb"></div>
+        <div class="client__txt"><strong>MB92 Barcelona</strong><span>World-leading shipyard, Port of Barcelona</span></div>
+      </article>
     </div>
   </section>
 
-  <!-- ===== MANIFESTO / VALUE PROP ===== -->
-  <section class="manifesto" id="manifesto">
-    <p class="section-label reveal-up"><span>Why Belora</span></p>
-    <h2 class="manifesto__title">
-      <span class="word">One</span> <span class="word">partner.</span>
-      <span class="word">One</span> <span class="word">operator.</span><br/>
-      <span class="word accent">On-site</span> <span class="word accent">mobility,</span>
-      <span class="word accent">fully</span> <span class="word accent">managed.</span>
+  <!-- ===== PROBLEM ===== -->
+  <section class="problem" id="problem">
+    <h2 class="problem__title">
+      <span class="word">Moving</span> <span class="word">people</span> <span class="word">across</span>
+      <span class="word">a</span> <span class="word">large</span> <span class="word">site</span><br/>
+      <span class="word accent">shouldn't</span> <span class="word accent">be</span>
+      <span class="word accent">this</span> <span class="word accent">hard.</span>
     </h2>
-    <p class="manifesto__body reveal-up">
-      We design, deploy, and operate bike fleets — so clients can outsource
-      internal mobility to a single partner.
+    <p class="problem__body reveal-up">
+      A resort, port, factory or campus can stretch for kilometers — staff lose time
+      crossing it, guests and teams wait, and cars and vans just clog the place. Most
+      sites have simply learned to accept the lost hours, higher costs and slower operations.
     </p>
   </section>
 
-  <!-- ===== BENEFITS (Why Belora) ===== -->
-  <section class="benefits" id="why">
-    <div class="benefits__head">
-      <p class="section-label reveal-up"><span>Key benefits</span></p>
-      <h3 class="benefits__lead reveal-up">
-        Everything that makes a fleet reliable —<br/> owned end to end by one operator.
-      </h3>
+  <!-- ===== SOLUTION ===== -->
+  <section class="solution" id="solution">
+    <div class="solution__media reveal-up">
+      <div class="solution__img" data-img="fleet"></div>
     </div>
-
-    <div class="benefits__grid">
-      <article class="bcard" data-cursor="hover">
-        <span class="bcard__num">01</span>
-        <h4>Operational reliability through site-specific fleets</h4>
-        <p>Minimized downtime and reduced friction through fleets configured
-           for terrain, use case, and user profile.</p>
-        <div class="bcard__line"></div>
-      </article>
-
-      <article class="bcard" data-cursor="hover">
-        <span class="bcard__num">02</span>
-        <h4>Single point of accountability</h4>
-        <p>One operator, fully responsible. No shared ownership of service
-           issues — maintenance, repairs, insurance, incidents, and spare
-           parts are on us.</p>
-        <div class="bcard__line"></div>
-      </article>
-
-      <article class="bcard" data-cursor="hover">
-        <span class="bcard__num">03</span>
-        <h4>Zero-CAPEX, predictable OPEX model</h4>
-        <p>Monthly service pricing replaces upfront investment and variable
-           operational costs.</p>
-        <div class="bcard__line"></div>
-      </article>
-    </div>
-
-    <div class="benefits__result reveal-up">
-      <span class="benefits__result-mark">→</span>
-      <p>No operational headaches, predictable costs, and a single contract
-         for on-site mobility.</p>
+    <div class="solution__body">
+      <p class="section-label reveal-up"><span>One partner, everything included</span></p>
+      <h3 class="solution__title reveal-up">A complete bike fleet, <em>managed end to end.</em></h3>
+      <p class="solution__lead reveal-up">
+        Belora isn't a bike supplier — we're your on-site mobility partner.
+        Everything is included in one service:
+      </p>
+      <div class="features">
+        <article class="feature reveal-up">
+          <span class="feature__num">01</span>
+          <h4>Tailored fleet</h4>
+          <p>We assess your site, terrain and use cases, then design the right mix:
+             from mechanical bikes to eBikes and cargo bikes.</p>
+        </article>
+        <article class="feature reveal-up">
+          <span class="feature__num">02</span>
+          <h4>Maintenance &amp; repair</h4>
+          <p>Kept running by our qualified partner network, so your fleet is always available.</p>
+        </article>
+        <article class="feature reveal-up">
+          <span class="feature__num">03</span>
+          <h4>Software</h4>
+          <p>Manage, track and optimize your entire fleet from one platform.</p>
+        </article>
+        <article class="feature reveal-up">
+          <span class="feature__num">04</span>
+          <h4>Operating lease <span class="feature__tag">2–4 years</span></h4>
+          <p>One predictable monthly fee. No upfront investment, no asset on your books.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- ===== WHO WE SERVE (horizontal pinned) ===== -->
-  <section class="serve" id="serve">
+  <!-- ===== WHO IT'S FOR (horizontal pin) ===== -->
+  <section class="serve" id="solutions">
     <div class="serve__intro">
-      <p class="section-label reveal-up"><span>Who we serve</span></p>
-      <h3 class="serve__title reveal-up">
-        Built for large-scale on-site mobility.
-        <em>Tailored to each site.</em>
-      </h3>
-      <p class="serve__lead reveal-up">
-        We operate at sites where size and dispersion make internal mobility
-        an operational challenge.
-      </p>
+      <p class="section-label reveal-up"><span>Who it's for</span></p>
+      <h3 class="serve__title reveal-up">Built for the places that <em>move the most.</em></h3>
     </div>
 
     <div class="serve__pin" id="servePin">
@@ -191,12 +180,9 @@
           <span class="panel__idx">01</span>
           <div class="panel__media" data-img="resort"></div>
           <div class="panel__body">
-            <h4>Large Hospitality Sites</h4>
-            <ul>
-              <li>Guest and staff mobility</li>
-              <li>Minimal client-side management</li>
-              <li>Rapid maintenance response</li>
-            </ul>
+            <h4>Hospitality</h4>
+            <p>Resorts and large campsites. Elevate the guest experience and power
+               internal operations on two wheels.</p>
           </div>
         </article>
 
@@ -204,12 +190,9 @@
           <span class="panel__idx">02</span>
           <div class="panel__media" data-img="industrial"></div>
           <div class="panel__body">
-            <h4>Industrial Sites &amp; Logistics</h4>
-            <ul>
-              <li>Large-scale site coverage</li>
-              <li>Reduced transit times</li>
-              <li>Operationally efficient mobility</li>
-            </ul>
+            <h4>Industrial sites</h4>
+            <p>Ports, industrial estates and factories. Move teams and tools quickly
+               across vast facilities.</p>
           </div>
         </article>
 
@@ -217,12 +200,9 @@
           <span class="panel__idx">03</span>
           <div class="panel__media" data-img="campus"></div>
           <div class="panel__body">
-            <h4>Corporate Campuses</h4>
-            <ul>
-              <li>Zero CAPEX deployment</li>
-              <li>Minimal operational burden</li>
-              <li>Fully managed service</li>
-            </ul>
+            <h4>Corporate &amp; university campuses</h4>
+            <p>Connect buildings, cut car dependency and offer smarter mobility to
+               employees and students.</p>
           </div>
         </article>
 
@@ -230,34 +210,33 @@
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="about" id="about">
-    <p class="section-label reveal-up"><span>About</span></p>
-    <div class="about__grid">
-      <h3 class="about__title">
-        On-site mobility requires more than bikes.
-        <em>It requires operations.</em>
-      </h3>
-      <div class="about__col">
+  <!-- ===== WHY MANAGED ===== -->
+  <section class="why" id="why">
+    <p class="section-label reveal-up"><span>Why managed</span></p>
+    <div class="why__grid">
+      <h3 class="why__title reveal-up">All the mobility. <em>None of the ownership.</em></h3>
+      <div class="why__col">
         <p class="reveal-up">
-          Belora was founded by operators who have personally managed and
-          operated fleets of thousands of bicycles in real operations. That
-          hands-on experience made one thing clear: service quality,
-          maintenance, uptime, and reliability are the key success factors.
+          With Belora's operating lease, your bike fleet is a service, not a capital
+          expense. No upfront investment. A single, predictable monthly cost. Nothing
+          on your balance sheet. And zero fleet management — we design it, maintain it
+          and keep it available, so your team can focus on running your site.
         </p>
-        <p class="about__mission reveal-up">
-          Belora exists to fully operate on-site mobility, so clients do not
-          need to manage this complexity internally.
-        </p>
+        <ul class="chips reveal-up">
+          <li>No capex</li>
+          <li>Predictable opex</li>
+          <li>Off balance sheet</li>
+          <li>Fully managed</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROVEN DEPLOYMENTS ===== -->
-  <section class="proven" id="proven">
+  <!-- ===== CUSTOMER STORIES ===== -->
+  <section class="proven" id="stories">
     <div class="proven__head">
-      <p class="section-label reveal-up"><span>Proven deployments</span></p>
-      <h3 class="proven__lead reveal-up">Operating today, at scale.</h3>
+      <p class="section-label reveal-up"><span>Customer stories</span></p>
+      <h3 class="proven__lead reveal-up">Operating at the world's most demanding sites.</h3>
     </div>
 
     <div class="proven__grid">
@@ -265,15 +244,20 @@
         <div class="dcard__media" data-img="ikos"></div>
         <span class="dcard__tag">Hospitality</span>
         <div class="dcard__foot">
-          <h4>IKOS Resorts</h4>
-          <p>Large-scale guest bike fleets across multiple five-star beach resorts.</p>
-          <button class="dcard__play" type="button" data-cursor="hover"
-                  data-video="assets/testimonial-ikos.mp4" aria-label="Play IKOS guest testimonial">
-            <span class="dcard__play-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="13" height="13"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-            </span>
-            <span>Watch testimonial</span>
-          </button>
+          <h4>Ikos Resorts</h4>
+          <span class="dcard__meta">5-star hospitality · Spain &amp; Greece</span>
+          <p>Across 7 resorts, Ikos uses Belora fleets for both guests and internal
+             operations — from security patrols to room service by bike.</p>
+          <div class="dcard__actions">
+            <a href="#contact" class="dcard__link" data-cursor="hover">Read the case study →</a>
+            <button class="dcard__play" type="button" data-cursor="hover"
+                    data-video="assets/testimonial-ikos.mp4" aria-label="Play IKOS guest testimonial">
+              <span class="dcard__play-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="13" height="13"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </span>
+              <span>Watch testimonial</span>
+            </button>
+          </div>
         </div>
       </article>
 
@@ -281,23 +265,69 @@
         <div class="dcard__media" data-img="port"></div>
         <span class="dcard__tag">Industrial</span>
         <div class="dcard__foot">
-          <h4>Puerto de Barcelona</h4>
-          <p>Internal employee mobility across a large industrial port environment.</p>
+          <h4>MB92</h4>
+          <span class="dcard__meta">World-leading shipyard · Port of Barcelona</span>
+          <p>MB92's operations team moves between offices, on-site workshops and
+             superyachts on a dedicated internal Belora fleet.</p>
+          <div class="dcard__actions">
+            <a href="#contact" class="dcard__link" data-cursor="hover">Read the case study →</a>
+          </div>
         </div>
       </article>
     </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section class="how" id="how">
+    <div class="how__head">
+      <p class="section-label reveal-up"><span>How it works</span></p>
+      <h3 class="how__lead reveal-up">From assessment to riding, in four steps.</h3>
+    </div>
+    <div class="steps">
+      <article class="step reveal-up">
+        <span class="step__num">01</span>
+        <h4>Assess</h4>
+        <p>We visit and analyze your site, terrain and mobility needs.</p>
+      </article>
+      <article class="step reveal-up">
+        <span class="step__num">02</span>
+        <h4>Design</h4>
+        <p>We build a tailored fleet and integration plan, financing included.</p>
+      </article>
+      <article class="step reveal-up">
+        <span class="step__num">03</span>
+        <h4>Deploy</h4>
+        <p>We deliver and set up bikes, stations and software.</p>
+      </article>
+      <article class="step reveal-up">
+        <span class="step__num">04</span>
+        <h4>Manage</h4>
+        <p>We maintain and optimize the fleet for the life of the contract.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="ctaband invert">
+    <h3 class="ctaband__title reveal-up">Let's design the right fleet for <em>your site.</em></h3>
+    <p class="ctaband__body reveal-up">
+      Book a free fleet assessment with our team. No commitment — just expert advice
+      on what on-site mobility could look like for you.
+    </p>
+    <a href="#contact" class="btn btn--solid reveal-up" data-cursor="hover">
+      <span>Book a free consultation</span>
+      <svg viewBox="0 0 16 16" width="15" height="15"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+    </a>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section class="contact" id="contact">
     <div class="contact__left">
       <p class="section-label reveal-up"><span>Get in touch</span></p>
-      <h3 class="contact__title">
-        Contact <span class="accent">Belora</span>
-      </h3>
+      <h3 class="contact__title">Contact <span class="accent">Belora</span></h3>
       <p class="contact__sub reveal-up">Tell us briefly how we can help.</p>
       <div class="contact__direct reveal-up">
-        <a href="mailto:admin@beloramobility.com" data-cursor="hover">admin@beloramobility.com</a>
+        <a href="mailto:falk@beloramobility.com" data-cursor="hover">falk@beloramobility.com</a>
         <span>Barcelona, Spain</span>
       </div>
     </div>
@@ -321,7 +351,9 @@
       <div class="field field--select">
         <select id="reason" name="reason" required>
           <option value="" disabled selected>Why are you contacting us?</option>
-          <option value="fleet">Fleet inquiry</option>
+          <option value="consultation">Book a consultation</option>
+          <option value="fleet">Fleet for my site</option>
+          <option value="partnership">Partnership</option>
           <option value="other">Other</option>
         </select>
         <i></i>
@@ -334,31 +366,58 @@
     </form>
   </section>
 
+  <!-- ===== BELORA GO BAND ===== -->
+  <section class="gocta">
+    <div class="gocta__inner reveal-up">
+      <div>
+        <h4>Run a smaller property?</h4>
+        <p>Belora GO offers turnkey bike services for boutique hotels and small
+           campsites — zero financial risk, zero fleet management.</p>
+      </div>
+      <a href="https://belorago.com" target="_blank" rel="noopener" class="btn btn--ghost" data-cursor="hover">Discover Belora GO →</a>
+    </div>
+  </section>
+
   <!-- ===== FOOTER ===== -->
   <footer class="footer invert">
     <img class="footer__logo" src="assets/logo-horizontal-light.svg" alt="Belora Mobility" />
+    <p class="footer__tagline">Bike Mobility for Companies.</p>
     <div class="footer__row">
       <div class="footer__col">
+        <span class="footer__label">Solutions</span>
+        <a href="#solutions" data-cursor="hover">Hospitality</a>
+        <a href="#solutions" data-cursor="hover">Industrial sites</a>
+        <a href="#solutions" data-cursor="hover">Campuses</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Company</span>
+        <a href="#how" data-cursor="hover">How it works</a>
+        <a href="#stories" data-cursor="hover">Case studies</a>
+        <a href="#problem" data-cursor="hover">About</a>
+      </div>
+      <div class="footer__col">
         <span class="footer__label">Contact</span>
-        <a href="mailto:admin@beloramobility.com" data-cursor="hover">admin@beloramobility.com</a>
-      </div>
-      <div class="footer__col">
-        <span class="footer__label">Location</span>
+        <a href="mailto:falk@beloramobility.com" data-cursor="hover">falk@beloramobility.com</a>
         <span>Barcelona, Spain</span>
-      </div>
-      <div class="footer__col">
-        <span class="footer__label">Legal</span>
-        <a href="#" data-cursor="hover">Privacy Policy</a>
-        <a href="#" data-cursor="hover">Cookie Policy</a>
       </div>
     </div>
     <div class="footer__base">
-      <span>© 2026 Belora Mobility</span>
-      <span>Designed for trust, luxury &amp; sustainability</span>
+      <span>© 2026 Belora Mobility. All rights reserved.</span>
+      <span class="footer__legal">
+        <a href="#" data-cursor="hover">Privacy Policy</a>
+        <a href="#" data-cursor="hover">Cookie Policy</a>
+      </span>
     </div>
   </footer>
 
 </main>
+
+<!-- ===== WhatsApp float ===== -->
+<a class="whatsapp" data-cursor="hover" target="_blank" rel="noopener"
+   href="https://api.whatsapp.com/send/?phone=34635225020&text=Hi%20Belora%2C%20I%27d%20like%20to%20know%20more%20about%20your%20managed%20bike%20fleets.&type=phone_number&app_absent=0"
+   aria-label="Chat with Belora on WhatsApp">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.2 1.6 6L4 29l8.2-1.6c1.7.9 3.7 1.4 5.8 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3.8.8-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.4 0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10zm5.5-7.5c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></svg>
+</a>
 
 <!-- ===== Testimonial video modal ===== -->
 <div class="vmodal" id="videoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Guest testimonial">

@@ -492,17 +492,24 @@ em{ font-style:normal; color:var(--lime); }
 /* ========================================================================
    FOOTER
    ===================================================================== */
-.footer{ background:var(--bg); border-top:1px solid var(--line-soft); padding:clamp(60px,8vh,90px) var(--pad) 40px; overflow:hidden; }
-.footer__logo{ height:42px; width:auto; display:block; max-width:var(--maxw); margin:0 auto 50px; }
-.footer__row{ display:grid; grid-template-columns:repeat(auto-fit, minmax(min(160px,100%),1fr)); gap:30px; max-width:var(--maxw); margin:0 auto 50px; }
-.footer__col{ display:flex; flex-direction:column; gap:10px; }
-.footer__label{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--faint); margin-bottom:6px; }
-.footer__col a{ transition:color .35s; }
-.footer__col a:hover{ color:var(--lime); }
+.footer{ background:var(--bg); border-top:1px solid var(--line-soft); padding:clamp(64px,9vh,104px) var(--pad) 36px; overflow:hidden; }
+.footer__top{
+  max-width:var(--maxw); margin:0 auto; display:flex; align-items:flex-start; justify-content:space-between;
+  gap:48px; flex-wrap:wrap; padding-bottom:clamp(48px,8vh,90px);
+}
+.footer__brand{ display:flex; flex-direction:column; gap:16px; max-width:360px; }
+.footer__contact{ display:flex; flex-direction:column; gap:6px; margin-top:4px; }
+.footer__contact a{ color:var(--ink); transition:color var(--dur) var(--ease); }
+.footer__contact a:hover{ color:var(--lime); }
+.footer__contact span{ color:var(--faint); font-size:14px; }
+.footer__nav{ display:flex; flex-wrap:wrap; align-items:center; gap:16px 30px; }
+.footer__nav a{ color:var(--muted); font-size:15px; transition:color var(--dur) var(--ease); }
+.footer__nav a:hover{ color:var(--ink); }
 .footer__base{
   display:flex; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding-top:26px;
   border-top:1px solid var(--line-soft); font-size:13px; color:var(--faint); flex-wrap:wrap; gap:12px;
 }
+@media (max-width:760px){ .footer__top{ flex-direction:column; gap:36px; } }
 
 /* ========================================================================
    TESTIMONIAL VIDEO MODAL
@@ -640,8 +647,8 @@ em{ font-style:normal; color:var(--lime); }
 /* ========================================================================
    FOOTER additions + WhatsApp
    ===================================================================== */
-.footer__logo{ margin:0 auto 16px; }
-.footer__tagline{ text-align:center; color:var(--muted); margin:0 0 50px; font-size:15px; }
+.footer__logo{ height:32px; width:auto; display:block; margin:0; }
+.footer__tagline{ text-align:left; color:var(--muted); margin:0; font-size:15px; line-height:1.5; }
 .footer__legal{ display:flex; gap:20px; }
 .footer__legal a{ transition:color var(--dur) var(--ease); }
 .footer__legal a:hover{ color:var(--lime); }

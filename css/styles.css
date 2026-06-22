@@ -553,12 +553,11 @@ em{ font-style:normal; color:var(--lime); }
 .proof__num i{ color:var(--lime); font-style:normal; }
 .proof__cap{ font-size:15px; color:var(--muted); }
 .proof__clients{ display:flex; gap:16px; flex-wrap:wrap; }
-.client{ display:flex; align-items:center; gap:14px; padding:13px 22px 13px 13px; border:1px solid var(--line-soft); border-radius:14px; background:var(--bg-3); transition:border-color var(--dur) var(--ease); }
+.client{ display:flex; flex-direction:column; align-items:flex-start; gap:14px; padding:22px 24px; min-width:230px; border:1px solid var(--line-soft); border-radius:16px; background:var(--bg-3); transition:border-color var(--dur) var(--ease); }
 .client:hover{ border-color:var(--line); }
-.client__img{ width:46px; height:46px; border-radius:10px; background-size:cover; background-position:center; flex:none; filter:grayscale(.1); }
-.client__txt{ display:flex; flex-direction:column; gap:2px; }
-.client__txt strong{ font-family:var(--font-display); font-weight:500; font-size:16px; }
-.client__txt span{ font-size:12.5px; color:var(--muted); max-width:26ch; }
+.client__logo{ height:36px; width:auto; display:block; object-fit:contain; opacity:.9; }
+.client__wordmark{ font-family:var(--font-display); font-weight:500; font-size:27px; letter-spacing:.02em; line-height:1; color:var(--ink); }
+.client__cap{ font-size:12.5px; color:var(--muted); max-width:30ch; }
 @media (max-width:760px){ .proof{ flex-direction:column; align-items:flex-start; } .proof__clients{ width:100%; } .client{ flex:1 1 240px; } }
 
 /* ========================================================================
